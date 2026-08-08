@@ -16,7 +16,8 @@ from datetime import datetime
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-def generate_sample_data(n_samples=5000, n_features=10):
+def generate_sample_data(n_samples=5000, n_features=10)():
+    """TODO: Add docstring."""
     X, y = make_classification(
         n_samples=n_samples,
         n_features=n_features,

@@ -66,7 +66,8 @@ class ModelInfo(BaseModel):
     trained_at: str
     metrics: dict
 
-def load_model(model_name: str):
+def load_model(model_name: str)():
+    """TODO: Add docstring."""
     if model_name not in MODEL_CACHE:
         model_path = f"models/{model_name}.joblib"
         if not os.path.exists(model_path):
